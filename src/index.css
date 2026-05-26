@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Natural Tones styling colors */
+  --color-natural-bg: #F5F5F0;
+  --color-natural-text: #434338;
+  --color-natural-sage: #5A5A40;
+  --color-natural-sage-hover: #484833;
+  --color-natural-accent: #D4A373;
+  --color-natural-accent-hover: #c39262;
+  --color-natural-muted: #9A9A8A;
+  --color-natural-border: #D9D9D2;
+  --color-natural-light-border: #EBEBE5;
+  --color-natural-card: #F9F9F7;
+
+  /* Dark mode overrides of natural tones for high-comfort night reading */
+  --color-natural-dark-bg: #1c1c18;
+  --color-natural-dark-card: #252520;
+  --color-natural-dark-text: #ebebe5;
+  --color-natural-dark-sage: #8c8c70;
+  --color-natural-dark-muted: #828275;
+  --color-natural-dark-border: #3c3c35;
+}
+
+html, body {
+  font-family: var(--font-sans);
+  background-color: var(--color-natural-bg);
+  color: var(--color-natural-text);
+}
+
+html.dark, html.dark body {
+  background-color: var(--color-natural-dark-bg);
+  color: var(--color-natural-dark-text);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print optimization */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-card {
+    border: 1px solid #434338 !important;
+    box-shadow: none !important;
+    background: white !important;
+    color: black !important;
+  }
+}
+
+

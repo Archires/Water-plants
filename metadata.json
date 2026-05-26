@@ -1,0 +1,6 @@
+{
+  "name": "Lịch Tưới Trường Mường Men",
+  "description": "Hệ thống quản lý, phân công và quay lịch tưới cây ngẫu nhiên cho nhân sự Trường Mường Men từ ngày 01/06 đến 31/07.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
